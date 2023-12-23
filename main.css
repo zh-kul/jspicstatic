@@ -1,0 +1,408 @@
+html {
+    background: linear-gradient(90deg, #ffde59, #ff914d);
+    background-size: cover;
+    height: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+    }
+    .input-container input[type="text"] {
+        width: 100%;
+    }
+    .image2 {
+        display: none;
+    }
+}
+
+
+.reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* 在两个主要列之间保持一定间距 */
+}
+
+.review-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* This spreads out the items */
+    margin-bottom: 10px;
+	flex-basis: 45%; /* 每个评论项占据 45% 的宽度 */
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.positive {
+    color: green;
+}
+
+.negative {
+    color: red;
+}
+
+.neutral {
+    color: grey;
+}
+
+.review-text {
+    /* Your styles for the review text */
+}
+
+.review-percentage {
+    margin-left: auto;
+    font-weight: bold;
+}
+
+
+/* 多行文本框样式 */
+textarea {
+    resize: none; /* 禁止调整大小 */
+    width: 100%; /* 宽度根据容器调整 */
+    height: 100px; /* 固定高度，可根据需要调整 */
+}
+
+@media (max-width: 768px) {
+    textarea {
+        height: 150px; /* 在小屏幕上调整高度 */
+    }
+}
+
+
+body, .logo, .nav a {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.svg-container {
+    max-width: 5%; /* 设置 SVG 最大宽度为容器的 5% */
+    max-height: 3vh; /* 设置 SVG 最大高度为视口高度的 3% */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+    color: #af2639;
+    margin-left: 20px;
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    margin-right: 20px;
+}
+
+
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+    .nav {
+    display: none; /* 在小屏幕上隐藏导航栏 */
+    }
+
+    .nav.show {
+    display: flex; /* 显示导航栏的类 */
+    }
+
+    /* 显示汉堡菜单图标 */
+    .menu-toggle {
+      display: block;
+      font-size: 14px; /* 样式可根据需要进行调整 */
+    }
+
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* 居中对齐 */
+        text-align: center;
+        width: 100%; /* 设置容器宽度为100%屏幕宽度 */
+    }
+
+    .input-container input[type="text"] {
+        width: 100%; /* 让输入框宽度占满容器 */
+    }
+
+}
+
+
+
+/* 显示导航菜单 */
+.nav.show {
+  display: flex;
+  flex-direction: column; /* 垂直显示菜单项 */
+  background-color: #ffffff; /* 可根据需要设置背景颜色 */
+  position: absolute;
+  top: 60px; /* 可根据需要设置按钮下边距 */
+  right: 0;
+  z-index: 4; /* 确保菜单在按钮上方显示 */
+}
+
+.nav.show li {
+  margin: 14px 0;
+}
+
+
+.nav li {
+    margin-left: 14px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.main {
+    margin: 0;
+    display: flex;
+}
+
+.left {
+    width: 60%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* 垂直排列子元素 */
+}
+
+.right {
+    width: 5%;
+    padding: 0px;
+    position: absolute; /* 图片设置为绝对定位 */
+    bottom: 0; /* 图片底部与容器底部对齐 */
+    right: 0; /* 图片右侧与容器右侧对齐 */
+}
+
+.banner {
+    width: 100%;
+    background: linear-gradient(90deg, #af2639 10%, #ffffff 10%);
+    color: white;
+    height: 20px; /* 横幅的高度 */
+    text-align: center; /* 文本居中 */
+    line-height: 20px; /* 使文本在垂直方向居中 */
+    font-weight: bold; /* 加粗文本 */
+}
+
+.title {
+    font-size: 3.25em;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 0px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+.input {
+    width: 80%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 10px;
+}
+
+.submit {
+    width: 15%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #FF8C00;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.image {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+}
+
+.overall {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+}
+
+.stars-container {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.stars-container .subtitle {
+    font-size: 1em;
+    font-weight: bold;
+    color: black;
+    margin-right: 10px;
+}
+
+/* 适当调整星星的外边距和缩放大小 */
+.stars-container .svg-container {
+    margin-right: 5px;
+    transform: scale(0.5);
+}
+
+.image-container {
+    position: relative;
+    z-index: 1
+}
+
+.image2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 680%; /* 使用百分比调整第二张图片的宽度 */
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .image1,
+    .image2 {
+        display: none;
+    }
+    .input-container {
+        text-align: center; /* 让内容在水平方向上居中 */
+    }
+}
+
+
+.input-container {
+position: relative; /* Change to relative position */
+background-color: white;
+padding: 20px;
+width: 90%;
+border-radius: 5px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+display: block;
+align-items: center; /* Center vertically */
+margin: 20; /* Center horizontally */
+z-index: 2; /* Set a higher z-index to ensure it's on top */
+}
+
+.input-container input[type="text"] {
+flex-grow: 1;
+margin-right: 10px;
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+margin-bottom: 20px;
+box-sizing: border-box;
+border-radius: 15px; /* Add rounded corners */
+}
+
+.input-container input[type="password"] {
+flex-grow: 1;
+margin-right: 10px;
+width: 100%;
+padding: 12px 20px;
+margin-bottom: 20px;
+margin: 8px 0;
+box-sizing: border-box;
+border-radius: 15px; /* Add rounded corners */
+}
+
+.input-container input[type="submit"] {
+background-color: red;
+color: white;
+padding: 10px 20px; /* Adjust button padding */
+margin: 8px 0;
+border: none;
+margin-bottom: 20px;
+cursor: pointer;
+}
+
+.input-container input[type="submit"]:hover {
+opacity: 0.8;
+}
+
+.button :hover {
+opacity: 0.8;
+}
+
+.image2 {
+    z-index: 1
+}
+
+/* 遮罩样式 */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+/* 加载图标样式 */
+.loader {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* 弹出框样式 */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
